@@ -1,4 +1,4 @@
-# Data_Science
+# Data Science
 Repositório de estudo de Data Science, que tem como objetivo fornecer uma visão geral dos cursos oferecidos pela plataforma Alura. A Alura é uma das principais plataformas de ensino online no Brasil, com uma ampla gama de cursos nas áreas de tecnologia, negócios e criatividade.
 
 Na área de Data Science, a Alura oferece diversos cursos que abrangem desde conceitos básicos até tópicos avançados. Entre os cursos oferecidos, realizei:
