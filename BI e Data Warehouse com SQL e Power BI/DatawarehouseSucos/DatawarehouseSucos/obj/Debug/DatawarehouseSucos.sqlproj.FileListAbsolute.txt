@@ -1,0 +1,6 @@
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\bin\Debug\DatawarehouseSucos.dacpac
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\DatawarehouseSucos.sqlproj.AssemblyReference.cache
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\DatawarehouseSucos.dll
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\DatawarehouseSucos.pdb
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\bin\Debug\DatawarehouseSucos.dll
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\bin\Debug\DatawarehouseSucos.pdb
