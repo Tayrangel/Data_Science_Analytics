@@ -1,0 +1,543 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/14/2023 5:27:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-G093PJO"
+  DTS:CreatorName="DESKTOP-G093PJO\tayha"
+  DTS:DTSID="{C757D41E-F00A-430A-805A-157CA5DA1DD1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="CargaFatos"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{C6C99EC5-0FD8-4B97-951E-4833F80658A3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Conexão FONTES_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8A8FE8C-8E41-4CA1-8772-9D521D6D1590}"
+      DTS:ObjectName="Conexão FONTES_DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-G093PJO;User ID=;Initial Catalog=FONTES_DB;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Server SPN=;Authentication=;Access Token=;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Fatos001"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{D89B20E3-301D-4C7B-B37E-81AAD2D9271F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Fatos001"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga Fatos001\Carga Fato001"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Carga Fato001"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM TAB_FATO001
+WHERE YEAR(DATA_FATO) &gt;= '2014'
+AND MONTH(DATA_FATO) &gt;= '1'
+AND YEAR(DATA_FATO) &lt;= '2014'
+AND MONTH(DATA_FATO) &lt;= '1'</property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fatos001\Carga Fato001.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Conexão FONTES_DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Conexão FONTES_DB]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[DATA_FATO]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[DATA_FATO]"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[DATA_FATO]"
+                      name="DATA_FATO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_DIA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_DIA]"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_DIA]"
+                      name="COD_DIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_CLIENTE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_CLIENTE]"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_CLIENTE]"
+                      name="COD_CLIENTE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_FABRICA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_FABRICA]"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_FABRICA]"
+                      name="COD_FABRICA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_PRODUTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_PRODUTO]"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_PRODUTO]"
+                      name="COD_PRODUTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_ORGANIZACIONAL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_ORGANIZACIONAL]"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[COD_ORGANIZACIONAL]"
+                      name="COD_ORGANIZACIONAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[FATURAMENTO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[FATURAMENTO]"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[FATURAMENTO]"
+                      name="FATURAMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[IMPOSTO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[IMPOSTO]"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[IMPOSTO]"
+                      name="IMPOSTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[CUSTO_VARIAVEL]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[CUSTO_VARIAVEL]"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[CUSTO_VARIAVEL]"
+                      name="CUSTO_VARIAVEL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[UNIDADE_VENDIDA]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[UNIDADE_VENDIDA]"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[UNIDADE_VENDIDA]"
+                      name="UNIDADE_VENDIDA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[QUANTIDADE_VENDIDA]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[QUANTIDADE_VENDIDA]"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].Columns[QUANTIDADE_VENDIDA]"
+                      name="QUANTIDADE_VENDIDA"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[DATA_FATO]"
+                      dataType="dbTimeStamp"
+                      name="DATA_FATO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_DIA]"
+                      dataType="wstr"
+                      length="50"
+                      name="COD_DIA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_CLIENTE]"
+                      dataType="wstr"
+                      length="50"
+                      name="COD_CLIENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_FABRICA]"
+                      dataType="wstr"
+                      length="50"
+                      name="COD_FABRICA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_PRODUTO]"
+                      dataType="wstr"
+                      length="50"
+                      name="COD_PRODUTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[COD_ORGANIZACIONAL]"
+                      dataType="wstr"
+                      length="50"
+                      name="COD_ORGANIZACIONAL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[FATURAMENTO]"
+                      dataType="r8"
+                      name="FATURAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[IMPOSTO]"
+                      dataType="r8"
+                      name="IMPOSTO" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[CUSTO_VARIAVEL]"
+                      dataType="r8"
+                      name="CUSTO_VARIAVEL" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[UNIDADE_VENDIDA]"
+                      dataType="r8"
+                      name="UNIDADE_VENDIDA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB].ExternalColumns[QUANTIDADE_VENDIDA]"
+                      dataType="r8"
+                      name="QUANTIDADE_VENDIDA" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[DATA_FATO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[DATA_FATO]"
+                      name="DATA_FATO" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_DIA]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_DIA]"
+                      name="COD_DIA" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_CLIENTE]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_CLIENTE]"
+                      name="COD_CLIENTE" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_FABRICA]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_FABRICA]"
+                      name="COD_FABRICA" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_PRODUTO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_PRODUTO]"
+                      name="COD_PRODUTO" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_ORGANIZACIONAL]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[COD_ORGANIZACIONAL]"
+                      name="COD_ORGANIZACIONAL" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[FATURAMENTO]"
+                      dataType="r8"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[FATURAMENTO]"
+                      name="FATURAMENTO" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[IMPOSTO]"
+                      dataType="r8"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[IMPOSTO]"
+                      name="IMPOSTO" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[CUSTO_VARIAVEL]"
+                      dataType="r8"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[CUSTO_VARIAVEL]"
+                      name="CUSTO_VARIAVEL" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[UNIDADE_VENDIDA]"
+                      dataType="r8"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[UNIDADE_VENDIDA]"
+                      name="UNIDADE_VENDIDA" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[QUANTIDADE_VENDIDA]"
+                      dataType="r8"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[QUANTIDADE_VENDIDA]"
+                      name="QUANTIDADE_VENDIDA" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fatos001\Dimensão de Alteração Lenta"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Dimensão de Alteração Lenta;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;3"
+              description="Atualiza uma dimensão de data warehouse do SQL Server Analysis Services. Atualize registros da dimensão que já estejam presentes e insira os registros que não estão. Por exemplo, atualize a tabela DimProduct do banco de dados OLAP AdventureWorksDW com dados da tabela Products do banco de dados OLTP AdventureWorks."
+              name="Dimensão de Alteração Lenta"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SELECT usada para criar um conjunto de linhas de esquema."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a cláusula WHERE na instrução SELECT que seleciona a linha atual entre as linhas com chaves de negócios idênticas."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as atualizações de atributo de histórico são direcionadas para a saída de transformação para atualizações de atributo de alteração."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se a transformação falhará quando as colunas com atributos fixos contiverem alterações."
+                  name="FailOnFixedAttributeChange">true</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome da coluna para o membro inferido."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as atualizações de membro inferido são detectadas."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se a transformação falhará quando uma pesquisa de registro existente falhar."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.UInt32"
+                  description="Especifica que todas as linhas na entrada são novas ou a transformação detecta o tipo de alteração."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Connections[LookupConnection]"
+                  description="Define a conexão a ser usada para pesquisas na tabela de dimensão"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]"
+                  name="Entrada de Dimensão de Alteração Lenta">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Outputs[Saída Inalterada]"
+                  description="Linhas inalteradas"
+                  exclusionGroup="1"
+                  name="Saída Inalterada"
+                  synchronousInputId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Outputs[Nova Saída]"
+                  description="Novas linhas"
+                  exclusionGroup="1"
+                  name="Nova Saída"
+                  synchronousInputId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Outputs[Saída de Atributo Fixo]"
+                  description="Linhas com alterações em colunas marcadas com FixedAttribute"
+                  exclusionGroup="1"
+                  name="Saída de Atributo Fixo"
+                  synchronousInputId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Outputs[Saída de Atualizações de Atributo de Alteração]"
+                  description="Essas linhas contêm novas informações para as alterações da coluna ChangingAttribute (Type 1)"
+                  exclusionGroup="1"
+                  name="Saída de Atualizações de Atributo de Alteração"
+                  synchronousInputId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Outputs[Saída de Inserções de Atributo de Histórico]"
+                  description="O resultado de alterações de HistoricalAttribute (Type 2) nessas novas linhas"
+                  exclusionGroup="2"
+                  name="Saída de Inserções de Atributo de Histórico"
+                  synchronousInputId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Outputs[Saída de Atualizações de Membro Inferido]"
+                  description="Informações para atualizar a linha de dimensão inicial sem preenchimento"
+                  exclusionGroup="1"
+                  name="Saída de Atualizações de Membro Inferido"
+                  synchronousInputId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga Fatos001.Paths[Saída de Origem OLE DB]"
+              endId="Package\Carga Fatos001\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Carga Fatos001\Carga Fato001.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Carga Fatos001"
+          TopLeft="121,94" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Fatos001">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Carga Fatos001\Carga Fato001"
+          TopLeft="199,124" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Carga Fatos001\Dimensão de Alteração Lenta"
+          TopLeft="166,215" />
+        <EdgeLayout
+          Id="Package\Carga Fatos001.Paths[Saída de Origem OLE DB]"
+          TopLeft="273.75,166">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fatos001\Carga Fato001">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

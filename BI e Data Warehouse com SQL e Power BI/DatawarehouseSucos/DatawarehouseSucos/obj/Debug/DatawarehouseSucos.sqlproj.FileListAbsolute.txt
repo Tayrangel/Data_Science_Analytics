@@ -4,3 +4,7 @@ C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Po
 C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\DatawarehouseSucos.pdb
 C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\bin\Debug\DatawarehouseSucos.dll
 C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\bin\Debug\DatawarehouseSucos.pdb
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\Model.xml
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\refactor.xml
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\postdeploy.sql
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\BI e Data Warehouse com SQL e Power BI\DatawarehouseSucos\DatawarehouseSucos\obj\Debug\predeploy.sql
