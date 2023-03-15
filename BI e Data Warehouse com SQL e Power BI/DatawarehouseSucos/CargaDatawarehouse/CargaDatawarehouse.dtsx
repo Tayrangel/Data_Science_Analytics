@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaDatawarehouse"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{9BE1B16F-72D5-43A9-93F7-D15C4A0DBF1C}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{665DFFCF-3773-495F-8B9E-B77A6C8DCF88}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Ano_Final">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">2013</DTS:Property>
+        DTS:Name="ParameterValue">2014</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -41,7 +41,7 @@
       DTS:ObjectName="Mes_Final">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">4</DTS:Property>
+        DTS:Name="ParameterValue">12</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
