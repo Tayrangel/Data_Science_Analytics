@@ -1,0 +1,11 @@
+SELECT HIERARCHIZE
+(
+	{[Cliente].[Estado].&[Distrito Federal], [Cliente].[Estado].&[Mato Grosso do Sul], [Cliente].[Estado].&[Rio Grande do Sul], 
+	[Cliente].[Estado].&[Bahia], [Cliente].[Estado].&[Paraná]}
+) ON ROWS,
+
+(
+	{[Tempo].[Semestre e Ano].Members}
+) ON COLUMNS
+
+FROM [COMPLETA]

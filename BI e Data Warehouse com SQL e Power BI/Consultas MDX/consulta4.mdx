@@ -1,0 +1,43 @@
+SELECT
+(
+	{[Cliente].[Hierarquia Geográfica].[Nível Região].&[Sudeste].Children}
+) ON ROWS,
+(
+	{[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[01-2014].&[2014]&[01-2014]&[01-2014]&[01-2014]:
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[02-2014].&[2014]&[01-2014]&[02-2014]&[06-2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]
+
+SELECT
+(
+	{[Cliente].[Hierarquia Geográfica].[Nível Região].&[Sul].&[Rio Grande do Sul].&[Porto Alegre].Parent}
+) ON ROWS,
+(
+	{[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[01-2014].&[2014]&[01-2014]&[01-2014]&[01-2014]:
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[02-2014].&[2014]&[01-2014]&[02-2014]&[06-2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]
+
+SELECT
+(
+	{Descendants([Cliente].[Hierarquia Geográfica].[Nível Região].&[Sul].&[Rio Grande do Sul])}
+) ON ROWS,
+(
+	{[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[01-2014].&[2014]&[01-2014]&[01-2014]&[01-2014]:
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[02-2014].&[2014]&[01-2014]&[02-2014]&[06-2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]
+
+SELECT
+(
+	{Ascendants([Cliente].[Hierarquia Geográfica].[Nível Região].&[Sul].&[Rio Grande do Sul])}
+) ON ROWS,
+(
+	{[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[01-2014].&[2014]&[01-2014]&[01-2014]&[01-2014]:
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[02-2014].&[2014]&[01-2014]&[02-2014]&[06-2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]

@@ -1,0 +1,14 @@
+SELECT NON EMPTY
+(
+	CROSSJOIN (
+	{[Measures].[Faturamento], [Measures].[Margem]},
+	{[Cliente].[Estado].&[São Paulo], [Cliente].[Estado].&[Rio de Janeiro]
+	})
+) ON ROWS,
+
+(
+	{[Tempo].[Hierarquia Mês Ano].[Ano].&[2013].&[2013]&[01-2013].&[2013]&[01-2013]&[02-2013].&[2013]&[01-2013]&[02-2013]&[05-2013]:
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2013].&[2013]&[02-2013].&[2013]&[02-2013]&[03-2013].&[2013]&[02-2013]&[03-2013]&[08-2013]}
+) ON COLUMNS
+
+FROM [COMPLETA]

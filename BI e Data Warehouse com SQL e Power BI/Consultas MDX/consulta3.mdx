@@ -1,0 +1,10 @@
+SELECT
+(
+	{[Cliente].[Estado].Members}
+) ON ROWS,
+(
+	{[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[01-2014].&[2014]&[01-2014]&[01-2014]&[01-2014]:
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2014].&[2014]&[01-2014].&[2014]&[01-2014]&[02-2014].&[2014]&[01-2014]&[02-2014]&[06-2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento Líquido]

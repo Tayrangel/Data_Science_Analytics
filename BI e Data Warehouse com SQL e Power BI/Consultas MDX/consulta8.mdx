@@ -1,0 +1,37 @@
+SELECT ORDER (
+(
+	{[Produto].[Marca].&[Clean], [Produto].[Marca].&[Linha Refrescante], [Produto].[Marca].&[Sabor da Montanha]}),
+	[Measures].[Faturamento], DESC
+) ON ROWS,
+
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]
+
+SELECT ORDER (
+	CROSSJOIN (
+		({[Cliente].[Estado].&[Goiais], [Cliente].[Estado].&[Minas Gerais], [Cliente].[Estado].&[Rio Grande do Sul]}),
+		({[Produto].[Marca].&[Clean], [Produto].[Marca].&[Linha Refrescante], [Produto].[Marca].&[Sabor da Montanha]})
+	),
+	[Measures].[Faturamento], ASC
+) ON ROWS,
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]
+
+SELECT ORDER (
+	CROSSJOIN (
+		({[Cliente].[Estado].&[Goiais], [Cliente].[Estado].&[Minas Gerais], [Cliente].[Estado].&[Rio Grande do Sul]}),
+		({[Produto].[Marca].&[Clean], [Produto].[Marca].&[Linha Refrescante], [Produto].[Marca].&[Sabor da Montanha]})
+	),
+	[Measures].[Faturamento], BASC
+) ON ROWS,
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+
+FROM [COMPLETA] WHERE [Measures].[Faturamento]
