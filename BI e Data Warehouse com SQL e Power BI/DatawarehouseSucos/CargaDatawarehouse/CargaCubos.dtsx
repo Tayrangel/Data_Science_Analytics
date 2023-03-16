@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaCubos"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{B3649B2A-BF6F-4858-8BF9-987619341490}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{A52A0212-9552-4EBE-A152-2CC624D2AB1F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -133,6 +133,10 @@
           Size="231,42"
           Id="Package\Atualização dos Cubos Primários"
           TopLeft="165,249" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Atualizar Cubo Completa"
+          TopLeft="182,338" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="276.75,196">
@@ -155,36 +159,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="195,42"
-          Id="Package\Atualizar Cubo Completa"
-          TopLeft="164,340" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="280.5,291">
+          TopLeft="280,291">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19,49"
+              EndConnector="0,47"
               Start="0,0"
-              End="-19,41.5">
+              End="0,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="-4,24.5" />
-                  <mssgle:LineSegment
-                    End="-15,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15,24.5"
-                    Point2="-19,24.5"
-                    Point3="-19,28.5" />
-                  <mssgle:LineSegment
-                    End="-19,41.5" />
+                    End="0,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -197,11 +185,11 @@
     </LayoutInfo>
   </Package>
   <ConnectionManager
-    design-time-name="Package.ConnectionManagers[localhost]">
+    design-time-name="Package.ConnectionManagers[DESKTOP-G093PJO]">
     <ProjectReferenceName></ProjectReferenceName>
   </ConnectionManager>
   <ConnectionManager
-    design-time-name="Package.ConnectionManagers[DESKTOP-G093PJO]">
+    design-time-name="Package.ConnectionManagers[localhost]">
     <ProjectReferenceName></ProjectReferenceName>
   </ConnectionManager>
 </Objects>]]></DTS:DesignTimeProperties>

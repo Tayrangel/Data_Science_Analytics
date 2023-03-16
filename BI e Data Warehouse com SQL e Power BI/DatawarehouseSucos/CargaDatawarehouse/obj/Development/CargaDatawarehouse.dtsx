@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaDatawarehouse"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{121ABC91-4A88-4E64-9C0A-2D4279899772}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{6AEEA297-07B3-4185-9EF9-11993996196B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -193,6 +193,10 @@
           Size="138,42"
           Id="Package\Carga Fatos"
           TopLeft="291,183" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Carga OLAP's"
+          TopLeft="277,261" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="372.5,144">
@@ -227,10 +231,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Carga OLAP's"
-          TopLeft="277,261" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="360,225">
