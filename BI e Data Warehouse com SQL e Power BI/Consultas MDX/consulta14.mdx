@@ -1,0 +1,34 @@
+WITH 
+	SET [Cidades] AS
+	'ORDER([Cliente].[Hierarquia Geográfica].[Nível Cidade].MEMBERS, [Measures].[Faturamento], BDESC)'
+	MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "##,###.00"
+SELECT 
+({
+	[Cidades]
+}) ON ROWS,
+(
+	{[Measures].[Faturamento de Vendas]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Tempo].[Ano].&[2014]
+
+WITH 
+	SET [Cidades] AS
+	'ORDER([Cliente].[Hierarquia Geográfica].[Nível Cidade].MEMBERS, [Measures].[Faturamento], BDESC)'
+	MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "##,###.00"
+	MEMBER [Measures].[Posição Rank] AS
+	'RANK([Cliente].[Hierarquia Geográfica].Currentmember, [Cidades])',
+	FORMAT_STRING = "#;#;-"
+SELECT 
+({
+	[Cidades]
+}) ON ROWS,
+(
+	{[Measures].[Faturamento de Vendas], [Measures].[Posição Rank]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Tempo].[Ano].&[2014]

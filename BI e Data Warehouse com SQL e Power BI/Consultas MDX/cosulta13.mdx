@@ -1,0 +1,54 @@
+WITH MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "#,###.00"
+SELECT
+({
+	[Cliente].[Hierarquia Geográfica].[Nível Cidade].Members
+}) ON ROWS,
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Measures].[Faturamento de Vendas]
+
+WITH MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "#,###.00"
+SELECT ORDER
+(
+	{[Cliente].[Hierarquia Geográfica].[Nível Cidade].Members },
+	[Measures].[Faturamento], BDESC
+) ON ROWS,
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Measures].[Faturamento de Vendas]
+
+WITH MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "#,###.00"
+SELECT ORDER
+(
+	TopCount ({[Cliente].[Hierarquia Geográfica].[Nível Cidade].Members }, 3, [Measures].[Faturamento]),
+	[Measures].[Faturamento], BDESC
+) ON ROWS,
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Measures].[Faturamento de Vendas]
+
+WITH MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "#,###.00"
+SELECT ORDER
+(
+	BottomCount ({[Cliente].[Hierarquia Geográfica].[Nível Cidade].Members }, 3, [Measures].[Faturamento]),
+	[Measures].[Faturamento], BDESC
+) ON ROWS,
+(
+	{[Tempo].[Ano].&[2014]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Measures].[Faturamento de Vendas]

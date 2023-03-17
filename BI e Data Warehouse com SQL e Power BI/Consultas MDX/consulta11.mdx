@@ -1,0 +1,60 @@
+WITH MEMBER [MEASURES].[Variação Faturamento] AS 
+	'[Measures].[Faturamento]-([Measures].[Faturamento], [Tempo].[Hierarquia Mês Ano].Currentmember.PrevMember)',
+	FORMAT_STRING = "##,###.00"
+SELECT NON EMPTY
+({
+	[Tempo].[Hierarquia Mês Ano].[Nível Do Mês e Ano].MEMBERS
+}) ON ROWS,
+(
+	{[Measures].[Faturamento], [Measures].[Variação Faturamento]}
+) ON COLUMNS
+
+FROM [COMPLETA]
+
+WITH MEMBER [MEASURES].[Variação Faturamento] AS 
+	'[Measures].[Faturamento]-([Measures].[Faturamento], [Tempo].[Hierarquia Mês Ano].Currentmember.PrevMember)',
+	FORMAT_STRING = "##,###.00"
+
+	MEMBER [MEASURES].[Variação Faturamento Percentual] AS 
+	'(([Measures].[Faturamento], [Tempo].[Hierarquia Mês Ano].Currentmember)/
+	([Measures].[Faturamento], [Tempo].[Hierarquia Mês Ano].Currentmember.PrevMember))-1',
+	FORMAT_STRING = "##,###.00 %"
+SELECT NON EMPTY
+({
+	[Tempo].[Hierarquia Mês Ano].[Nível Do Mês e Ano].MEMBERS
+}) ON ROWS,
+(
+	{[Measures].[Faturamento], [Measures].[Variação Faturamento], [MEASURES].[Variação Faturamento Percentual]}
+) ON COLUMNS
+
+FROM [COMPLETA]
+
+WITH MEMBER [MEASURES].[Variação Faturamento Ano] AS 
+	'([Measures].[Faturamento], ParallelPeriod([Tempo].[Hierarquia Mês Ano].[Nível Do Mês e Ano], 12, [Tempo].[Hierarquia Mês Ano].Currentmember))',
+	FORMAT_STRING = "##,###.00"
+SELECT NON EMPTY
+({
+	[Tempo].[Hierarquia Mês Ano].[Nível Do Mês e Ano].MEMBERS
+}) ON ROWS,
+(
+	{[Measures].[Faturamento], [Measures].[Variação Faturamento Ano]}
+) ON COLUMNS
+
+FROM [COMPLETA]
+
+WITH MEMBER [MEASURES].[Faturamento YTD] AS 
+	'SUM(PeriodsToDate([Tempo].[Hierarquia Mês Ano].[Ano], [Tempo].[Hierarquia Mês Ano].Currentmember), [Measures].[Faturamento])',
+	FORMAT_STRING = "##,###.00"
+
+	MEMBER [MEASURES].[Faturamento QTY] AS 
+	'SUM(PeriodsToDate([Tempo].[Hierarquia Mês Ano].[Nível Trimestre e Ano], [Tempo].[Hierarquia Mês Ano].Currentmember), [Measures].[Faturamento])',
+	FORMAT_STRING = "##,###.00"
+SELECT NON EMPTY
+({
+	[Tempo].[Hierarquia Mês Ano].[Nível Do Mês e Ano].MEMBERS
+}) ON ROWS,
+(
+	{[Measures].[Faturamento], [Measures].[Faturamento YTD], [Measures].[Faturamento QTY]}
+) ON COLUMNS
+
+FROM [COMPLETA]

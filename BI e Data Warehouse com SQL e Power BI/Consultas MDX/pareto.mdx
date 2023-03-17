@@ -1,0 +1,33 @@
+WITH 
+	SET [Clientes] AS
+	'ORDER([Cliente].[Hierarquia Geográfica].[Nível Cliente], [Measures].[Faturamento], BDESC)'
+	MEMBER [Measures].[Posição Rank] AS
+	'RANK([Cliente].[Hierarquia Geográfica].Currentmember, [Clientes])',
+	FORMAT_STRING = "#;#;-"
+	MEMBER [Measures].[Faturamento de Vendas] AS
+	'[Measures].[Faturamento]',
+	FORMAT_STRING = "#,###.00"
+	MEMBER [Measures].[% Vendas] AS
+	'[Measures].[Faturamento]/([Measures].[Faturamento], [Cliente].[Hierarquia Geográfica].[All])',
+	FORMAT_STRING = "#,###.00 %"
+	MEMBER [Measures].[Faturamento Acumulado] AS
+	'SUM(HEAD([Clientes], [Measures].[Posição Rank]), [Measures].[Faturamento])',
+	FORMAT_STRING = "#,###.00"
+	MEMBER [Measures].[Total Clientes] AS
+	'[Clientes].COUNT',
+	FORMAT_STRING = "#;#;-"
+	MEMBER [Measures].[% Clientes] AS
+	'[Measures].[Posição Rank]/[Measures].[Total Clientes]',
+	FORMAT_STRING = "#,###.00 %"
+	MEMBER [Measures].[% Vendas Acumulado] AS
+	'SUM(HEAD([Clientes], [Measures].[Posição Rank]), [Measures].[% Vendas])',
+	FORMAT_STRING = "#,###.00 %"
+SELECT 
+({
+	[Clientes]
+}) ON ROWS,
+(
+	{[Measures].[Faturamento de Vendas], [Measures].[% Vendas Acumulado], [Measures].[% Clientes]}
+) ON COLUMNS
+FROM [COMPLETA]
+WHERE [Tempo].[Ano].&[2014]
