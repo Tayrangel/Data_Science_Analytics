@@ -1,0 +1,5 @@
+Select non empty ( {[Produto].[Produto].Members } ) On Rows,
+ ( { [Measures].[Faturamento] } ) On Columns
+ from [COMPLETO]
+ where ( [Cliente].[Hierarquia Geográfica].[Nível Região].
+ &[Centro Oeste].&[Distrito Federal].&[Brasília].&[Drogas Super Brasília - DF] )

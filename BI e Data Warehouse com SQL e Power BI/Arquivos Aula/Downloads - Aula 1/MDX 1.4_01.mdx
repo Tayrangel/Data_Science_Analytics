@@ -1,0 +1,5 @@
+SELECT  
+(  { [Tempo].[Hierarquia do Mês e Ano].[Ano].&[2013].&[Segundo Semestre 2013].&[2013]&[02-2013]&[03-2013].&[2013]&[02-2013]&[03-2013]&[07-2013] 
+,  [Tempo].[Hierarquia do Mês e Ano].[Ano].&[2013].&[Segundo Semestre 2013].&[2013]&[02-2013]&[03-2013].&[2013]&[02-2013]&[03-2013]&[08-2013] }  )  ON Rows  
+,  (  { [Measures].[Faturamento Líquido] ,  [Measures].[Margem] }  )  ON Columns  
+From  [COMPLETO] Where ([Fábrica].[Hierarquia das Fábricas].[Nível Fábrica].&[Fáb. Rio de Janeiro])

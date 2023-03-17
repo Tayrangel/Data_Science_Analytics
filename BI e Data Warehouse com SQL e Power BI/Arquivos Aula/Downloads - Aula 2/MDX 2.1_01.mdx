@@ -1,0 +1,9 @@
+SELECT NON EMPTY
+({
+	[Tempo].[Hierarquia Mês Ano].[Ano].&[2013].&[2013]&[02-2013].CHILDREN
+}) ON ROWS,
+(
+	{[Measures].[Faturamento], [Measures].[% Taxa Variação]}
+) ON COLUMNS
+
+FROM [COMPLETA]

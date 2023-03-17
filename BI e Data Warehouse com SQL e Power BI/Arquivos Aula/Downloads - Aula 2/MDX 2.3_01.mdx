@@ -1,0 +1,4 @@
+Select ( {[Cliente].[Estado].Members} ) on Rows,
+( {[Tempo].[Mës e Ano].&[2014]&[01-2014]&[01-2014]&[01-2014] : [Tempo].[Mës e Ano].&[2014]&[01-2014]&[02-2014]&[06-2014] } )
+on Columns
+from [COMPLETO] where ([Measures].[Faturamento])

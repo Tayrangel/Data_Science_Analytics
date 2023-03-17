@@ -1,0 +1,7 @@
+Select   (   {  [Cliente].[Estado].&[Rio de Janeiro], 
+ [Cliente].[Estado].&[Minas Gerais] } )   On Rows , 
+(  { [Tempo].[Mës e Ano].&[2013]&[01-2013]&[01-2013]&[01-2013] , 
+[Tempo].[Mës e Ano].&[2013]&[01-2013]&[01-2013]&[02-2013] , 
+[Tempo].[Mës e Ano].&[2013]&[01-2013]&[01-2013]&[03-2013]  }  )  On Columns 
+From  [COMPLETO]
+Where ([Measures].[Faturamento Líquido])
