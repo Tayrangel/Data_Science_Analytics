@@ -19,7 +19,7 @@ Na área de Data Science, a Alura oferece diversos cursos que abrangem desde con
 * Consultas Multidimensionais: MDX com SQL Server
 * Report Analysis com Power BI: gerando relatórios empresariais
 
-Formação finalizada em 17/03/2023. [Certificado!]https://cursos.alura.com.br/degree/certificate/ce127d62-4bbc-4dd0-857d-fd9dc99fd526
+Formação finalizada em 17/03/2023. [Certificado!](https://cursos.alura.com.br/degree/certificate/ce127d62-4bbc-4dd0-857d-fd9dc99fd526)
 
 ### Python
 * Python: començando com a linguagem
