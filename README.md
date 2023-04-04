@@ -1,7 +1,8 @@
 # Data Science
-Repositório de estudo de Data Science, que tem como objetivo fornecer uma visão geral dos cursos oferecidos pela plataforma Alura. A Alura é uma das principais plataformas de ensino online no Brasil, com uma ampla gama de cursos nas áreas de tecnologia, negócios e criatividade.
+Repositório de estudo de Data Science, que tem como objetivo fornecer uma visão geral dos cursos oferecidos pela plataforma Alura e o Projeto Profissão do Século. A Alura é uma das principais plataformas de ensino online no Brasil, com uma ampla gama de cursos nas áreas de tecnologia, negócios e criatividade.
+O Projeto Profissão do Século é uma idealização com profissional João Pedro Moreira, o qual, ensina a área de analista e ciência de dados do zero até o primeiro emprego da área.
 
-Na área de Data Science, a Alura oferece diversos cursos que abrangem desde conceitos básicos até tópicos avançados. Entre os cursos oferecidos, realizei:
+Na área de Data Science, realizei os cursos que abrangem desde conceitos básicos até tópicos avançados. Entre os cursos oferecidos, realizei:
 ### Modelagem de dados
 
 * Modelagem de banco de dados: entidades, relacionamentos e atributos
@@ -26,3 +27,11 @@ Formação finalizada em 17/03/2023. [Certificado!](https://cursos.alura.com.br/
 * Python: entendendo a orientação a objetos
 * Python: avançando na orientação a objetos
 * Python: avançando na linguagem
+
+### Projeto profissão do século
+* Módulo fundamentos
+* Módulo planilhas do básico ao avançado
+* Módulo SQL
+* Módulos Power BI
+* Módulo Big Data, Inteligência Artificial, Computação em Nuvem
+* Módulo Python para análise de dados
