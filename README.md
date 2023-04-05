@@ -23,10 +23,10 @@ Na área de Data Science, realizei os cursos que abrangem desde conceitos básic
 Formação finalizada em 17/03/2023. [Certificado!](https://cursos.alura.com.br/degree/certificate/ce127d62-4bbc-4dd0-857d-fd9dc99fd526)
 
 ### Python
-* Python: començando com a linguagem
-* Python: entendendo a orientação a objetos
-* Python: avançando na orientação a objetos
-* Python: avançando na linguagem
+* Python: començando com a linguagem [Certificado!](https://cursos.alura.com.br/certificate/e54e2549-a815-4566-bdd8-3ee97afa9c66)
+* Python: avançando na linguagem [Certificado!](https://cursos.alura.com.br/certificate/81d292d5-77c6-4601-9f1f-b9980f8354d9)
+* Python: entendendo a orientação a objetos [Certificado!](https://cursos.alura.com.br/certificate/93bf5c12-1bba-4004-ac0b-300d1260445f)
+* Python: avançando na orientação a objetos [Certificado!](https://cursos.alura.com.br/certificate/6cc0d11b-8b87-425c-95db-f5d1b073eee4)
 
 ### Projeto profissão do século
 * Módulo fundamentos
