@@ -1,0 +1,19 @@
+﻿** Destaques
+     Tabelas que serão recriadas com os dados migrados
+       [dbo].[dimEstado]
+     Índices clusterizados que serão removidos
+       Nenhum
+     Índices clusterizados que serão criados
+       Nenhum
+     Possíveis problemas de dados
+       Nenhum
+
+** Ações do usuário
+     Recriar tabela
+       [dbo].[dimEstado] (Tabela)
+
+** Ações de suporte
+     Remover
+       [dbo].[FK_fCobertura_dimEstado] (Chave Estrangeira)
+     Criar
+       [dbo].[FK_fCobertura_dimEstado] (Chave Estrangeira)

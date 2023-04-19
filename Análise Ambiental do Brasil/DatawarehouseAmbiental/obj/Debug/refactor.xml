@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="1b2c82ea-432a-4707-9c69-2ce4a3c85915" ChangeDateTime="04/18/2023 20:34:14" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[dimEstado].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[dimEstado]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_estado" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f6f55b24-8f46-4714-bf3d-3fb2befffd02" ChangeDateTime="04/18/2023 20:42:27" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[dimBioma].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[dimBioma]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_bioma" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e2ad855e-27ab-48e3-9396-d6cc0abedfa5" ChangeDateTime="04/18/2023 20:43:52" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[dimCobertura].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[dimCobertura]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_cobertura" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f79c3ee1-676e-4275-82bc-6afb08c703ca" ChangeDateTime="04/18/2023 22:26:07" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[dimTempo].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[dimTempo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_dia" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3f8c3c83-86b2-4e97-914d-840d7afcb5cc" ChangeDateTime="04/18/2023 22:40:47" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[fCobertura].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fCobertura]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id_estado" />
+  </Operation>
+</Operations>
