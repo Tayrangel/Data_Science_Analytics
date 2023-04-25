@@ -1,0 +1,6 @@
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\DatawarehouseAmbiental\bin\Debug\DatawarehouseAmbiental.dacpac
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\DatawarehouseAmbiental\bin\Debug\DatawarehouseAmbiental.dll
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\DatawarehouseAmbiental\bin\Debug\DatawarehouseAmbiental.pdb
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\DatawarehouseAmbiental\obj\Debug\DatawarehouseAmbiental.sqlproj.AssemblyReference.cache
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\DatawarehouseAmbiental\obj\Debug\DatawarehouseAmbiental.dll
+C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\DatawarehouseAmbiental\obj\Debug\DatawarehouseAmbiental.pdb

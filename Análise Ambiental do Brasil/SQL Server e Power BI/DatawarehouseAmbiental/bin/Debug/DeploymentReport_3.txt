@@ -1,0 +1,27 @@
+﻿** Destaques
+     Tabelas que serão recriadas com os dados migrados
+       [dbo].[dimLocalizacao]
+       [dbo].[fCobertura]
+     Índices clusterizados que serão removidos
+       Nenhum
+     Índices clusterizados que serão criados
+       Nenhum
+     Possíveis problemas de dados
+       Nenhum
+
+** Ações do usuário
+     Recriar tabela
+       [dbo].[dimLocalizacao] (Tabela)
+       [dbo].[fCobertura] (Tabela)
+
+** Ações de suporte
+     Remover
+       [dbo].[FK_fCobertura_dimLocalizacao] (Chave Estrangeira)
+       [dbo].[FK_fCobertura_dimClasse] (Chave Estrangeira)
+       [dbo].[FK_fCobertura_DimBioma] (Chave Estrangeira)
+       [dbo].[FK_fCobertura_dimTempo] (Chave Estrangeira)
+     Criar
+       [dbo].[FK_fCobertura_dimLocalizacao] (Chave Estrangeira)
+       [dbo].[FK_fCobertura_dimClasse] (Chave Estrangeira)
+       [dbo].[FK_fCobertura_DimBioma] (Chave Estrangeira)
+       [dbo].[FK_fCobertura_dimTempo] (Chave Estrangeira)
