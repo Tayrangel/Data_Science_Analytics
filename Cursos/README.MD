@@ -1,8 +1,8 @@
 # Cursos 
-Esta pasta comtempla todos os estudos voltados para o Data Science, com objetivo de fornecer uma visão geral dos cursos oferecidos pela plataforma Alura e o Projeto Profissão do Século. A Alura é uma das principais plataformas de ensino online no Brasil, com uma ampla gama de cursos nas áreas de tecnologia, negócios e criatividade.
+Esta pasta comtempla todos os estudos voltados para o Data Science e Data Analytics, com objetivo de fornecer uma visão geral dos cursos oferecidos pela plataforma Alura e o Projeto Profissão do Século. A Alura é uma das principais plataformas de ensino online no Brasil, com uma ampla gama de cursos nas áreas de tecnologia, negócios e criatividade.
 O Projeto Profissão do Século é uma idealização com profissional João Pedro Moreira, o qual, ensina a área de analista e ciência de dados do zero até o primeiro emprego da área.
 
-Na área de Data Science, realizei os cursos que abrangem desde conceitos básicos até tópicos avançados. Entre os cursos oferecidos estão:
+Na área de Data Science e Data Analytics, realizei os cursos que abrangem desde conceitos básicos até tópicos avançados. Entre os cursos oferecidos estão:
 
 ## Alura
 <br>
