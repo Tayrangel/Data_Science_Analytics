@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-G093PJO</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9kGL+jWFBky5IE6qAHLFkwAAAAACAAAAAAAQZgAAAAEAACAAAAB6y92jsXqRFuTLZDX27K4VUBLtAlqzwrKFA2/ujgRssAAAAAAOgAAAAAIAACAAAAB++HasoKKrTsfsxTpDnnGyZDmyJdtCqjerMRUjY1WZAJAAAAAsENn6vzlJRHSNQ4xT2AkdXek727YIEu7tYo43SIL4JQwJXr/VlE9/GrLBaO8IQd2TnLaLnfKUwjFfVsPWCpULtr1RoFedbr6t3Un4zW9e/kqa652BcoPv2PdOGZWx0MHR2YLpgY3NfTJMqPPRvXbllM4+f1RKhP1QUeV3Xk2wv7OJKyMydgvQYFRn+YxgfG1AAAAANs2sIYxICB+4HWRec7i37LZQRVzT5Z9g08Wt7hz1IZS1nqDaQN/aHytZONfZa2/9wJLW9oT7ftq4Fk38dG3/ew==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9kGL+jWFBky5IE6qAHLFkwAAAAACAAAAAAAQZgAAAAEAACAAAADK6/nGIj8+2DbdpJLGXN1Ro//I6QiHHBsjML7ReiDolQAAAAAOgAAAAAIAACAAAABdh5tJGS5ye6FMOwE0uG3hoKG3k6NnNKEfHOmpeU4qyJAAAACJjXyt0yNhd0dpZjuHE3J5QJiALHeBkgEQ+0aun6diuGjWC4VlPLIabdDAoKe7f6OC3BVp2eH7T31XXvQ7wJULGSRAjaGUF+16j98a3jPgTDGmaHunyNb9HA0B5dkHyuslMfb+KtOX/DGazqVO4rAh97AVTD4FSPaSxbomB0AW1QfNPHdmo70nvKSoq1AhP2FAAAAAaqpebewsFif8wBqat3RgBauvpc0Sb/53lfguJFX8xOqQj/mUuAjqIAxZUygdOUPaUWCEsHOlsYr18yOL6FylFw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -787,10 +787,10 @@
                 <SSIS:Property SSIS:Name="Name">CargaFato</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">34</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">39</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6B402E3A-8984-4DCB-9910-E6E3A0FF406B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{DC44E9E0-9415-4D52-B5D1-A82FAF56711A}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1168,7 +1168,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\tayha\Desktop\TI\Projetos\Data_Science_Analytics\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1183,7 +1183,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\tayha\Desktop\TI\Projetos\Data_Science_Analytics\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1256,7 +1256,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\tayha\Desktop\TI\Projetos\Data_Science_Analytics\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

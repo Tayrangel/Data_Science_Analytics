@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaFato"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{3C98F372-3F9D-4D24-AC2D-5D50F9D9554D}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{DC44E9E0-9415-4D52-B5D1-A82FAF56711A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -75,7 +75,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\tayha\Desktop\TI\Projetos\Data_Science\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\tayha\Desktop\TI\Projetos\Data_Science_Analytics\Análise Ambiental do Brasil\Fonte de dados\Mapbiomas\1-tabela-geral-col7-mapbiomas-biomas-municipio-final.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -7850,12 +7850,12 @@
               name="Classificar Saída"
               startId="Package\CargaCobertura\Classificar Bioma 2.Outputs[Classificar Saída]" />
             <path
-              refId="Package\CargaCobertura.Paths[Classificar Saída3]"
+              refId="Package\CargaCobertura.Paths[Classificar Saída2]"
               endId="Package\CargaCobertura\Junção de Mesclagem 1.Inputs[Entrada Direita da Junção de Mesclagem]"
               name="Classificar Saída"
               startId="Package\CargaCobertura\Classificar Cidade 2.Outputs[Classificar Saída]" />
             <path
-              refId="Package\CargaCobertura.Paths[Classificar Saída2]"
+              refId="Package\CargaCobertura.Paths[Classificar Saída3]"
               endId="Package\CargaCobertura\Junção de Mesclagem 1.Inputs[Entrada Esquerda da Junção de Mesclagem]"
               name="Classificar Saída"
               startId="Package\CargaCobertura\Classificar Cidade.Outputs[Classificar Saída]" />
@@ -7885,12 +7885,22 @@
               name="Saída de Atualizações de Membro Inferido"
               startId="Package\CargaCobertura\Dimensão de Alteração Lenta.Outputs[Saída de Atualizações de Membro Inferido]" />
             <path
+              refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada4]"
+              endId="Package\CargaCobertura\Conversão de Dados.Inputs[Entrada de Conversão de Dados]"
+              name="Saída de Coluna Derivada"
+              startId="Package\CargaCobertura\Coluna Derivada.Outputs[Saída de Coluna Derivada]" />
+            <path
               refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada3]"
+              endId="Package\CargaCobertura\Classificar Bioma.Inputs[Classificar Entrada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\CargaCobertura\LTRIM bioma.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada]"
               endId="Package\CargaCobertura\Classificar Cidade.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
               startId="Package\CargaCobertura\REPLACE, UPPER E RTRIM.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada4]"
+              refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada1]"
               endId="Package\CargaCobertura\Classificar Cidade 2.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
               startId="Package\CargaCobertura\REPLACE E UPPER.Outputs[Saída de Coluna Derivada]" />
@@ -7900,27 +7910,17 @@
               name="Saída de Coluna Derivada"
               startId="Package\CargaCobertura\UPPER bioma.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada1]"
-              endId="Package\CargaCobertura\Classificar Bioma.Inputs[Classificar Entrada]"
-              name="Saída de Coluna Derivada"
-              startId="Package\CargaCobertura\LTRIM bioma.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\CargaCobertura.Paths[Saída de Coluna Derivada]"
-              endId="Package\CargaCobertura\Conversão de Dados.Inputs[Entrada de Conversão de Dados]"
-              name="Saída de Coluna Derivada"
-              startId="Package\CargaCobertura\Coluna Derivada.Outputs[Saída de Coluna Derivada]" />
-            <path
               refId="Package\CargaCobertura.Paths[Saída de Conversão de Dados]"
               endId="Package\CargaCobertura\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta]"
               name="Saída de Conversão de Dados"
               startId="Package\CargaCobertura\Conversão de Dados.Outputs[Saída de Conversão de Dados]" />
             <path
-              refId="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples1]"
+              refId="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples]"
               endId="Package\CargaCobertura\UPPER bioma.Inputs[Entrada de Coluna Derivada]"
               name="Saída de Origem de Arquivo Simples"
               startId="Package\CargaCobertura\CSV Bioma.Outputs[Saída de Origem de Arquivo Simples]" />
             <path
-              refId="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples]"
+              refId="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples1]"
               endId="Package\CargaCobertura\REPLACE E UPPER.Inputs[Entrada de Coluna Derivada]"
               name="Saída de Origem de Arquivo Simples"
               startId="Package\CargaCobertura\CSV Localizacao.Outputs[Saída de Origem de Arquivo Simples]" />
@@ -7968,6 +7968,10 @@
           Id="Package\CargaCobertura\REPLACE, UPPER E RTRIM"
           TopLeft="261.5,415.5" />
         <NodeLayout
+          Size="170,42"
+          Id="Package\CargaCobertura\Classificar Cidade 2"
+          TopLeft="52.5000000000001,517.5" />
+        <NodeLayout
           Size="165,42"
           Id="Package\CargaCobertura\LTRIM bioma"
           TopLeft="55.0000000000001,107.5" />
@@ -7975,6 +7979,10 @@
           Size="182,42"
           Id="Package\CargaCobertura\Junção de Mesclagem"
           TopLeft="272.5,312.5" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\CargaCobertura\Comando OLE DB"
+          TopLeft="282.5,1129.5" />
         <NodeLayout
           Size="167,42"
           Id="Package\CargaCobertura\Classificar Bioma 2"
@@ -7988,6 +7996,10 @@
           Id="Package\CargaCobertura\CSV Localizacao"
           TopLeft="5.50000000000006,311.5" />
         <NodeLayout
+          Size="172,42"
+          Id="Package\CargaCobertura\Comando OLE DB 1"
+          TopLeft="505.5,1129.5" />
+        <NodeLayout
           Size="156,42"
           Id="Package\CargaCobertura\Coluna Derivada"
           TopLeft="285.5,823.5" />
@@ -8000,6 +8012,10 @@
           Id="Package\CargaCobertura\Fato Cobertura"
           TopLeft="51,5.5" />
         <NodeLayout
+          Size="191,42"
+          Id="Package\CargaCobertura\Junção de Mesclagem 1"
+          TopLeft="268,619.5" />
+        <NodeLayout
           Size="176,42"
           Id="Package\CargaCobertura\Conversão de Dados"
           TopLeft="275.5,925.5" />
@@ -8008,6 +8024,14 @@
           Id="Package\CargaCobertura\UPPER bioma"
           TopLeft="281,107.5" />
         <NodeLayout
+          Size="161,42"
+          Id="Package\CargaCobertura\Classificar Cidade"
+          TopLeft="283,517.5" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\CargaCobertura\Não Dinâmico"
+          TopLeft="291.5,721.5" />
+        <NodeLayout
           Size="206,42"
           Id="Package\CargaCobertura\CSV Bioma"
           TopLeft="260.5,5.5" />
@@ -8015,6 +8039,10 @@
           Size="158,42"
           Id="Package\CargaCobertura\Classificar Bioma"
           TopLeft="61.5000000000001,209.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\CargaCobertura\Insert Destination"
+          TopLeft="59.0000000000002,1129.5" />
         <EdgeLayout
           Id="Package\CargaCobertura.Paths[Saída de Origem do Excel]"
           TopLeft="125.5,47.5">
@@ -8051,28 +8079,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples1]"
-          TopLeft="363.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples]"
           TopLeft="108.5,355.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8106,8 +8112,74 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="363.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\CargaCobertura.Paths[Saída de Conversão de Dados]"
           TopLeft="363.5,967.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada4]"
+          TopLeft="363.5,865.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada3]"
+          TopLeft="139,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8151,7 +8223,41 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada1]"
-          TopLeft="139,149.5">
+          TopLeft="118.5,457.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.0000000000001,60"
+              Start="0,0"
+              End="19.0000000000001,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="15.0000000000001,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.0000000000001,30"
+                    Point2="19.0000000000001,30"
+                    Point3="19.0000000000001,34" />
+                  <mssgle:LineSegment
+                    End="19.0000000000001,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada]"
+          TopLeft="363.5,457.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8172,8 +8278,68 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada]"
-          TopLeft="363.5,865.5">
+          Id="Package\CargaCobertura.Paths[Saída de Atualizações de Membro Inferido]"
+          TopLeft="363.5,1069.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-93.5976953125,20.12548828125,187.195390625,12.2490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Saída de Atualizações de Atributo de Alteração]"
+          TopLeft="415.75,1069.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="175.75,60"
+              Start="0,0"
+              End="175.75,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4855842185129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4855842185129"
+                    Point2="0,20.4855842185129"
+                    Point3="4,20.4855842185129" />
+                  <mssgle:LineSegment
+                    End="171.75,20.4855842185129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="171.75,20.4855842185129"
+                    Point2="175.75,20.4855842185129"
+                    Point3="175.75,24.4855842185129" />
+                  <mssgle:LineSegment
+                    End="175.75,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-15.4876953125,25.4855842185129,206.725390625,12.2490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Saída da Junção de Mesclagem1]"
+          TopLeft="363.5,661.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8207,6 +8373,110 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Nova Saída]"
+          TopLeft="311.25,1069.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-170.75,60"
+              Start="0,0"
+              End="-170.75,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4855842185129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4855842185129"
+                    Point2="0,20.4855842185129"
+                    Point3="-4,20.4855842185129" />
+                  <mssgle:LineSegment
+                    End="-166.75,20.4855842185129" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-166.75,20.4855842185129"
+                    Point2="-170.75,20.4855842185129"
+                    Point3="-170.75,24.4855842185129" />
+                  <mssgle:LineSegment
+                    End="-170.75,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-110.368359375,25.4855842185129,49.98671875,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Classificar Saída3]"
+          TopLeft="363.5,559.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.5,60"
+              Start="0,0"
+              End="30.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7009345794393" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7009345794393"
+                    Point2="0,35.7009345794393"
+                    Point3="4,35.7009345794393" />
+                  <mssgle:LineSegment
+                    End="26.5,35.7009345794393" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,35.7009345794393"
+                    Point2="30.5,35.7009345794393"
+                    Point3="30.5,39.7009345794393" />
+                  <mssgle:LineSegment
+                    End="30.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CargaCobertura.Paths[Classificar Saída2]"
+          TopLeft="137.5,559.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="195.5,60"
+              Start="0,0"
+              End="195.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7009345794393" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7009345794393"
+                    Point2="0,35.7009345794393"
+                    Point3="4,35.7009345794393" />
+                  <mssgle:LineSegment
+                    End="191.5,35.7009345794393" />
+                  <mssgle:CubicBezierSegment
+                    Point1="191.5,35.7009345794393"
+                    Point2="195.5,35.7009345794393"
+                    Point3="195.5,39.7009345794393" />
+                  <mssgle:LineSegment
+                    End="195.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8283,168 +8553,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\CargaCobertura\Classificar Cidade"
-          TopLeft="283,517.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada3]"
-          TopLeft="363.5,457.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170,42"
-          Id="Package\CargaCobertura\Classificar Cidade 2"
-          TopLeft="52.5000000000001,517.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída de Coluna Derivada4]"
-          TopLeft="118.5,457.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19.0000000000001,60"
-              Start="0,0"
-              End="19.0000000000001,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="15.0000000000001,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.0000000000001,30"
-                    Point2="19.0000000000001,30"
-                    Point3="19.0000000000001,34" />
-                  <mssgle:LineSegment
-                    End="19.0000000000001,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="191,42"
-          Id="Package\CargaCobertura\Junção de Mesclagem 1"
-          TopLeft="268,619.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Classificar Saída2]"
-          TopLeft="363.5,559.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="30.5,60"
-              Start="0,0"
-              End="30.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7009345794393" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7009345794393"
-                    Point2="0,35.7009345794393"
-                    Point3="4,35.7009345794393" />
-                  <mssgle:LineSegment
-                    End="26.5,35.7009345794393" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26.5,35.7009345794393"
-                    Point2="30.5,35.7009345794393"
-                    Point3="30.5,39.7009345794393" />
-                  <mssgle:LineSegment
-                    End="30.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Classificar Saída3]"
-          TopLeft="137.5,559.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="195.5,60"
-              Start="0,0"
-              End="195.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7009345794393" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7009345794393"
-                    Point2="0,35.7009345794393"
-                    Point3="4,35.7009345794393" />
-                  <mssgle:LineSegment
-                    End="191.5,35.7009345794393" />
-                  <mssgle:CubicBezierSegment
-                    Point1="191.5,35.7009345794393"
-                    Point2="195.5,35.7009345794393"
-                    Point3="195.5,39.7009345794393" />
-                  <mssgle:LineSegment
-                    End="195.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,42"
-          Id="Package\CargaCobertura\Não Dinâmico"
-          TopLeft="291.5,721.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída da Junção de Mesclagem1]"
-          TopLeft="363.5,661.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\CargaCobertura.Paths[Saída Não Dinâmica]"
           TopLeft="363.5,763.5">
@@ -8465,114 +8573,6 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\CargaCobertura\Insert Destination"
-          TopLeft="59.0000000000002,1129.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Nova Saída]"
-          TopLeft="311.25,1069.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-170.75,60"
-              Start="0,0"
-              End="-170.75,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4855842185129" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4855842185129"
-                    Point2="0,20.4855842185129"
-                    Point3="-4,20.4855842185129" />
-                  <mssgle:LineSegment
-                    End="-166.75,20.4855842185129" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-166.75,20.4855842185129"
-                    Point2="-170.75,20.4855842185129"
-                    Point3="-170.75,24.4855842185129" />
-                  <mssgle:LineSegment
-                    End="-170.75,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-110.368359375,25.4855842185129,49.98671875,10.3349609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\CargaCobertura\Comando OLE DB"
-          TopLeft="282.5,1129.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída de Atualizações de Membro Inferido]"
-          TopLeft="363.5,1069.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-93.5976953125,20.12548828125,187.195390625,12.2490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\CargaCobertura\Comando OLE DB 1"
-          TopLeft="505.5,1129.5" />
-        <EdgeLayout
-          Id="Package\CargaCobertura.Paths[Saída de Atualizações de Atributo de Alteração]"
-          TopLeft="415.75,1069.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="175.75,60"
-              Start="0,0"
-              End="175.75,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4855842185129" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4855842185129"
-                    Point2="0,20.4855842185129"
-                    Point3="4,20.4855842185129" />
-                  <mssgle:LineSegment
-                    End="171.75,20.4855842185129" />
-                  <mssgle:CubicBezierSegment
-                    Point1="171.75,20.4855842185129"
-                    Point2="175.75,20.4855842185129"
-                    Point3="175.75,24.4855842185129" />
-                  <mssgle:LineSegment
-                    End="175.75,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-15.4876953125,25.4855842185129,206.725390625,12.2490234375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
