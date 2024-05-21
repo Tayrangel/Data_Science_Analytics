@@ -11,3 +11,4 @@ Na pasta de estudos, descrevo detalhadamente o conteúdo dos cursos voltados par
 Além dos cursos, neste repositório de estudos em Data Analytics também disponibilizo os projetos pessoais desenvolvidos. Esses projetos são uma forma de aplicar os conhecimentos adquiridos nos cursos e desenvolver projetos que possam ser incluídos em meu portfólio.
 
 <!--* [Análise Ambiental do Brasil](/An%C3%A1lise%20Ambiental%20do%20Brasil/)-->
+* [Análise Vendas](/Análise/Vendas)
