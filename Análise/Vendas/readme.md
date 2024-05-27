@@ -1,4 +1,4 @@
-#### Dashboard de vendas no Power BI 📊 
+## Dashboard de vendas no Power BI 📊 
 
 A criação desse projeto foi com foco em design UI/UX, trazendo uma interface mais intuitiva e visualmente atraente, sem comprometer a riqueza dos dados e insights essenciais para facilitar a tomada de decisões estratégicas e operacionais de maneira ágil e precisa.
 
