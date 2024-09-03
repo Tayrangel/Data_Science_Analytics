@@ -12,4 +12,4 @@ Além dos cursos, neste repositório de estudos em Data Analytics também dispon
 
 <!--* [Análise Ambiental do Brasil](/An%C3%A1lise%20Ambiental%20do%20Brasil/)-->
 * [Análise Vendas](/Projects/Vendas)
-<img src="/Análise/Vendas/video_dashboard_vendas.gif">
+<img src="/Projects/Vendas/video_dashboard_vendas.gif">
